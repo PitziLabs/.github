@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="PitziLabs — Production that shows up when the business does.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1628"></stop>
+      <stop offset="1" stop-color="#1c3552"></stop>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#e08438" stroke-opacity="0.05" stroke-width="1"></path>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"></rect>
+  <rect width="1280" height="320" fill="url(#grid)"></rect>
+  <rect x="0" y="316" width="1280" height="4" fill="#e08438"></rect>
+
+  
+  <text x="1180" y="300" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="360" fill="#e08438" fill-opacity="0.06" letter-spacing="-20">:&gt;</text>
+
+  
+  <text x="80" y="118" font-family="ui-monospace, Menlo, monospace" font-size="17" fill="#8aa0bd" letter-spacing="5">PRACTICE · EST. 1999 · INFRASTRUCTURE OPS</text>
+
+  
+  <text x="78" y="190" font-family="&#39;Space Grotesk&#39;, system-ui, sans-serif" font-weight="700" font-size="76" fill="#faf7f2" letter-spacing="-3">Pitzi<tspan fill="#e08438">Labs</tspan> <tspan font-family="ui-monospace, Menlo, monospace" fill="#e08438" font-size="64">:&gt;</tspan></text>
+
+  
+  <text x="80" y="244" font-family="&#39;Space Grotesk&#39;, system-ui, sans-serif" font-size="26" fill="#d8cec2" letter-spacing="-0.5">Production that shows up when the business does.</text>
+
+  
+  <text x="80" y="284" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8aa0bd">~/pitzi-labs/runbook.md  ·  build it · break it · operate it</text>
+</svg>

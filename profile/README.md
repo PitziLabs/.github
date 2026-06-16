@@ -1,54 +1,48 @@
 <div align="center">
-  <img src="banner.svg" alt="Pitzi Labs — Production that shows up when the business does." width="100%">
+
+![PitziLabs — Production that shows up when the business does.](./assets/banner.svg)
+
+# PitziLabs
+
+**Production that shows up when the business does.**
+Twenty-five years of bare-metal data centers, 24×7 ops, and single-homed
+environments — now bridging into cloud-native architecture by building it,
+breaking it, and operating it.
+
+<br/>
+
 </div>
 
-<p align="center">
-  <strong>Infrastructure operations consulting.</strong> Twenty-five years of bare-metal data centers,
-  24×7 ops, and single-homed environments — now bridging into cloud-native by building it, breaking it,
-  and operating it.
-</p>
+### ☁️ &nbsp; Cloud & infrastructure
+![AWS](https://img.shields.io/badge/AWS-1c3552?style=flat-square&logo=amazonwebservices&logoColor=e08438)
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-1c3552?style=flat-square&logo=googlecloud&logoColor=e08438)
+![Azure](https://img.shields.io/badge/Azure-1c3552?style=flat-square&logo=microsoftazure&logoColor=e08438)
+![ECS Fargate](https://img.shields.io/badge/ECS%20Fargate-1c3552?style=flat-square&logo=amazonecs&logoColor=e08438)
 
----
+### 🏗️ &nbsp; Infrastructure as code
+![Terraform](https://img.shields.io/badge/Terraform-1c3552?style=flat-square&logo=terraform&logoColor=e08438)
+![Ansible](https://img.shields.io/badge/Ansible-1c3552?style=flat-square&logo=ansible&logoColor=e08438)
+![Docker](https://img.shields.io/badge/Docker-1c3552?style=flat-square&logo=docker&logoColor=e08438)
 
-## What I do
+### 🔁 &nbsp; CI/CD & supply chain
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-1c3552?style=flat-square&logo=githubactions&logoColor=e08438)
+![OIDC](https://img.shields.io/badge/OIDC-e08438?style=flat-square&logoColor=white)
+![Cosign](https://img.shields.io/badge/Cosign-1c3552?style=flat-square&logo=sigstore&logoColor=e08438)
 
-Four things, done well. No frameworks, no decks, no "digital transformation" — just infrastructure you can read, run, and hand off.
+### 📟 &nbsp; Observability & on-call
+![CloudWatch](https://img.shields.io/badge/CloudWatch-1c3552?style=flat-square&logo=amazoncloudwatch&logoColor=e08438)
+![Grafana](https://img.shields.io/badge/Grafana-1c3552?style=flat-square&logo=grafana&logoColor=e08438)
+![PagerDuty](https://img.shields.io/badge/PagerDuty-1c3552?style=flat-square&logo=pagerduty&logoColor=e08438)
 
-| | Service | |
-|---|---|---|
-| `01` | **Platform engineering** | Greenfield AWS / GCP / Azure builds. Terraform-managed, multi-AZ, least-privilege, observable from day one. A platform, not a single-app deployment. |
-| `02` | **Cost & posture audits** | Find the NAT gateway eating the budget, the IAM role nobody owns, the bucket with 40 TB of forgotten logs. One-page report, no theatre. |
-| `03` | **Incident & on-call** | Runbooks, alarms, and rotations humans can live with. Pager hygiene included. SLOs that reflect reality, not aspiration. |
-| `04` | **CI/CD & supply chain** | OIDC, signed images, plan-on-PR, apply-on-merge. No long-lived credentials anywhere. |
+<br/>
 
-## Selected work
+| What we do | |
+| :-- | :-- |
+| **Platform engineering** | Greenfield builds, Terraform-managed, observable from day one. |
+| **Cost & posture audits** | One-page report, no theatre. |
+| **Incident & on-call** | Runbooks and rotations humans can actually live with. |
+| **CI/CD & supply chain** | OIDC, signed images, no long-lived credentials. |
 
-The repos below are public and real — running infrastructure and tools, not portfolio props.
-
-| Repo | What it is |
-|---|---|
-| [**foundry-platform-demo**](https://github.com/PitziLabs/foundry-platform-demo) | Reference three-tier AWS platform, 100% Terraform — multi-AZ VPC, ECS Fargate behind an ALB (ACM / Route 53), RDS + ElastiCache, WAFv2, KMS, least-privilege IAM, CloudWatch/CloudTrail/Config + budget guardrails. |
-| [**ice-cream-book**](https://github.com/PitziLabs/ice-cream-book) | A real app on that platform — live at [icecreamtofightwith.com](https://icecreamtofightwith.com), deployed via GitHub OIDC → ECR / ECS / ALB. Under real load, paying real bills. |
-| [**homelab-observability**](https://github.com/PitziLabs/homelab-observability) | Git-driven, fully declarative observability for a home network — one Grafana Alloy container ships metrics + logs to Grafana Cloud, with Terraform-provisioned dashboards and alerts. |
-| [**firewalla-axiom-pipeline**](https://github.com/PitziLabs/firewalla-axiom-pipeline) | Self-hosted security-log pipeline: Zeek DNS / flow / TLS logs from a Firewalla to Axiom via Fluent Bit. 30-day searchable history at zero recurring cost. |
-| [**homeassistant-config**](https://github.com/PitziLabs/homeassistant-config) | A production residential smart home — 40+ entities managed declaratively in YAML, gitops-deployed, with two purpose-built dashboards. |
-| [**reference-checker**](https://github.com/PitziLabs/reference-checker) | Forensic reference-integrity auditor for academic publishing — prompt-engineered deep-scan citation verification on Claude with live web search. |
-| [**workstation-bootstrap**](https://github.com/PitziLabs/workstation-bootstrap) | Single-command bootstrap that turns a fresh Linux box into a fully configured cloud-infrastructure dev workstation, across four variants. |
-| [**shared-workflows**](https://github.com/PitziLabs/shared-workflows) | Reusable GitHub Actions and fleet-wide CI policy shared across every PitziLabs repo. |
-
-## How I think about production
-
-- **Build it, break it, operate it** — the person who designs the system carries the pager for it.
-- **Blast radius over blast capacity** — least-privilege is the default, not a checkbox.
-- **Runbooks beat heroics** — write the doc; update it when it lies.
-- **Observable from day one** — you cannot operate what you cannot see.
-- **Plan on PR, apply on merge** — the pipeline is the contract.
-- **Cost is a posture** — a NAT gateway you forgot about is a security problem.
-
-## Get in touch
-
-- **Email** — `chris@pitzilabs.dev`
-- **GitHub** — [github.com/PitziLabs](https://github.com/PitziLabs)
-- **Live demo** — [icecreamtofightwith.com](https://icecreamtofightwith.com) · the practice site lands at **pitzilabs.dev** soon
-
-<sub>This profile and the PitziLabs repos are built in collaboration with <a href="https://claude.ai">Claude</a> (Anthropic): I direct the work and review the output, Claude writes much of the code. I'm an infrastructure operator, not a software engineer — please read the repos as working infrastructure, not as a portfolio of coding ability.</sub>
+<div align="center">
+<sub><b>chris@pitzilabs.dev</b> &nbsp;·&nbsp; New England, US &nbsp;·&nbsp; remote · async-friendly</sub>
+</div>

@@ -5,7 +5,7 @@ org-level defaults from here.
 
 - [`profile/README.md`](profile/README.md) — the organization profile page that
   renders at **[github.com/PitziLabs](https://github.com/PitziLabs)**.
-  [`profile/banner.svg`](profile/banner.svg) is its header.
+  [`profile/assets/banner.svg`](profile/assets/banner.svg) is its header.
 
 Community-health defaults (e.g. `CONTRIBUTING.md`, `SECURITY.md`,
 `CODE_OF_CONDUCT.md`, issue/PR templates) can also live here and will apply to
