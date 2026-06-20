@@ -1,6 +1,6 @@
 <div align="center">
 
-![PitziLabs — Production that shows up when the business does.](./assets/banner.svg)
+![PitziLabs — Production that shows up when the need does.](./assets/banner.svg)
 
 # PitziLabs
 
