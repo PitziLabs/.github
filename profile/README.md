@@ -2,10 +2,8 @@
 
 ![PitziLabs — Production that shows up when the need does.](./assets/banner.svg)
 
-# PitziLabs
+**A career keeping production up — bare metal through cloud-native, and every platform shift in between — now building it, breaking it, and operating it myself.**
 
-**Production that shows up when the need does.**
-A career keeping production up — bare metal through cloud-native, and every platform shift in between — now building it, breaking it, and operating it myself.
 
 <br/>
 
