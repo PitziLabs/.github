@@ -4,10 +4,8 @@
 
 # PitziLabs
 
-**Production that shows up when the business does.**
-Twenty-five years of bare-metal data centers, 24×7 ops, and single-homed
-environments — now bridging into cloud-native architecture by building it,
-breaking it, and operating it.
+**Production that shows up when the need does.**
+A career keeping production up — bare metal through cloud-native, and every platform shift in between — now building it, breaking it, and operating it myself.
 
 <br/>
 
