@@ -22,8 +22,9 @@ clone. Org Claude is scoped to this one special repo — the org's front door.)
 ## What this repo is
 
 `PitziLabs/.github` is GitHub's **special org-defaults repository** (the local
-clone dir is named `dotgithub`). It holds no application code — it's
-content + branding that GitHub surfaces org-wide:
+clone dir is named `dotgithub`). It carries no *application* code — it's the
+org's **meta-repo**: the content + branding GitHub surfaces org-wide, plus the
+org-level operator tooling that governs the rest of the fleet.
 
 - **`profile/README.md`** renders as the public org landing page at
   **github.com/PitziLabs**. `profile/assets/banner.svg` is its header image.
@@ -32,6 +33,20 @@ content + branding that GitHub surfaces org-wide:
   any PitziLabs repo that doesn't define its own. **None are set yet** — adding
   one here is a fleet-wide change; confirm scope before doing it.
 - **`metrics/language-census.md`** is a periodically-regenerated report (see below).
+- **`fleet-ops/`** — settings-as-code for the whole fleet: `fleet-apply.sh`
+  (the merge-button/topic-spine/ruleset drift checker) plus the ruleset JSON.
+  This is **Repo Claude's** fleet-governance tooling, housed in the org meta-repo
+  because that's its natural home — and so it finally has version control. Run it
+  from here: `dotgithub/fleet-ops/fleet-apply.sh`. See `fleet-ops/README.md`.
+- **`archive/`** — local-only holding pen, **`.gitignore`d so it is never
+  published**. Holds relocated scratchpads (e.g. the interactive PitziLabs
+  portfolio mockup) that embed homelab LAN topology and therefore must not land
+  in this **public** repo. Keep this dir out of git.
+
+Note: only `profile/`, the root community-health files, `ISSUE_TEMPLATE/`,
+`workflow-templates/`, and `FUNDING.yml` are special-cased by GitHub. The
+`fleet-ops/` and `archive/` subdirs are ordinary directories GitHub ignores —
+they don't affect what renders org-wide.
 
 Two things that look like they'd belong here but **don't**: reusable CI
 workflows live in the `shared-workflows` repo, and the fleet-wide PR workflow is

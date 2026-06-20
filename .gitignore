@@ -1,0 +1,3 @@
+# Local-only holding pen — relocated scratchpads kept on disk but NOT published
+# (e.g. the PitziLabs portfolio mockup, which embeds homelab LAN topology).
+/archive/
