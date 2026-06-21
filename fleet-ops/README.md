@@ -8,6 +8,7 @@ problem across three mechanisms — no single one covers everything:
 |---|---|---|
 | **Branch protection** | PR-required, squash-only, no force-push/deletion, required status checks | **per-repo rulesets** — created/verified by `fleet-apply.sh` (`repo-ruleset.json`). Each repo also adds its own required status checks. |
 | **Merge-button + topics** | squash-only button, auto-merge, delete-branch, the `pitzilabs`+`claude` topic spine | **`fleet-apply.sh`** (rulesets can't set these) |
+| **Leftover branches** | merged-PR residue + abandoned no-PR branches that `delete_branch_on_merge` never cleaned | **`fleet-apply.sh --prune-branches`** (the setting only fires forward, on merge) |
 | **File skeleton** | README/CLAUDE/LICENSE/CI-wrapper starter files | **`PitziLabs/repo-template`** GitHub template (copies files, not settings) |
 
 The lesson that motivated this: a **GitHub template repo copies files, not
@@ -22,15 +23,37 @@ org-wide ruleset is a paid feature (see below).
 ```bash
 ./fleet-apply.sh                 # read-only check of all non-archived org repos
 ./fleet-apply.sh --apply         # apply merge-button + spine-topic fixes fleet-wide
+./fleet-apply.sh --prune-branches # delete merged-residue branches fleet-wide
 ./fleet-apply.sh --repo NAME     # scope to one repo (e.g. a freshly created one)
 ```
 
-Idempotent. Read-only by default; only `--apply` mutates. It enforces
+Idempotent. Read-only by default; only `--apply` (settings) and
+`--prune-branches` (branch deletion) mutate, and they are **independent flags**
+so the destructive branch sweep is always opt-in. It enforces
 squash-only + auto-merge + delete-branch-on-merge and the `pitzilabs`+`claude`
 topic spine, **creates the per-repo `main` branch ruleset** (`repo-ruleset.json`)
 if one is missing, and **warns** if any repo still carries the copy-pasted
 `bash bootstrap scripts…` review prompt (the regression fixed in June 2026). It
 does not touch signature topics or existing rulesets.
+
+## `--prune-branches` — sweep leftover branches
+
+`delete_branch_on_merge` is enabled fleet-wide, but it only deletes a head
+branch when its PR merges *after* the setting was turned on — it never
+retroactively cleans branches whose PR merged earlier, and never touches
+branches abandoned without a merged PR. That residue accumulates. The scan
+classifies every non-default branch by its PR association and acts accordingly:
+
+| Class | Signal | Action |
+|---|---|---|
+| **merged-residue** | a **merged** PR for the branch, no open PR | pruned by `--prune-branches` (its commits are in `main`'s history) |
+| **active** | an **open** PR | left alone |
+| **orphan** | **no PR at all** | **reported only, never auto-deleted** — a human must confirm the commits already landed on `main` some other way before removing it |
+
+The read-only check lists both prunable residue and orphans; `--prune-branches`
+deletes the residue and still only *reports* orphans. Squash-merge-safe: it keys
+off PR merge state, not commit ancestry, so a squashed branch (which always looks
+"ahead" of `main`) is still correctly seen as merged.
 
 Bootstrapping a freshly created repo is therefore one command:
 
