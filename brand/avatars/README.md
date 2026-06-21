@@ -1,13 +1,20 @@
 # brand/avatars — PitziLabs identity marks
 
 Canonical GitHub avatar marks for the PitziLabs identity. Both are the brand
-**chip** — a navy rounded square with the `<…:>` command-prompt mark inside
-(orange brackets, cream glyphs), per the Pitzi Labs brand contract.
+**chip** — a navy square with the `<…:>` command-prompt mark inside (orange
+brackets, cream glyphs), per the Pitzi Labs brand contract. Each comes in a
+**rounded** (avatar) and a **square** (sharp-corner) variant.
 
-| File | Mark | Used as |
-|------|------|---------|
-| `pl-navy.svg` / `pl-navy-512.png` | `<pl:>` | **Org** avatar — `github.com/PitziLabs` |
-| `cjp-brackets-navy.svg` / `cjp-brackets-navy-512.png` | `<cjp:>` | **Personal** avatar — `github.com/cpitzi` (brand-aligned derivative) |
+| File | Mark | Corners | Used as |
+|------|------|---------|---------|
+| `pl-navy.svg` / `pl-navy-512.png` | `<pl:>` | rounded | **Org** avatar — `github.com/PitziLabs` |
+| `cjp-brackets-navy.svg` / `cjp-brackets-navy-512.png` | `<cjp:>` | rounded | **Personal** avatar — `github.com/cpitzi` |
+| `pl-navy-square.svg` / `pl-navy-square-512.png` | `<pl:>` | square | Org mark on full-square surfaces |
+| `cjp-brackets-navy-square.svg` / `cjp-brackets-navy-square-512.png` | `<cjp:>` | square | Personal mark on full-square surfaces |
+
+GitHub **circle-crops** avatars, so the rounded variant is what you upload there;
+the square variants are for surfaces that show the full square edge (favicons,
+slides, og/social cards, print).
 
 ## Tokens
 
