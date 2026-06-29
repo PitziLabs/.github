@@ -1,13 +1,13 @@
-# PitziLabs Language Census
+# Lentago Labs Language Census
 
 A periodic census of the programming/markup/config languages represented across
-the **PitziLabs org repositories**, ordered by prominence (lines of code). This
+the **Lentago Labs org repositories**, ordered by prominence (lines of code). This
 file is meant to be **regenerated periodically** — see
 [Regenerating](#regenerating) for the exact, reproducible command, and log each
 refresh in the [Update log](#update-log).
 
 > **Scope.** Only repositories whose `origin` remote is under
-> `github.com/PitziLabs/`. Measured over the maintainer's `~/repos` working tree,
+> `github.com/lentago/`. Measured over the maintainer's `~/repos` working tree,
 > so it counts what's checked out locally for each org repo (not a GitHub API
 > query). Third-party clones (`ProxmoxMCP`, `firewalla-mcp`, `firewalla-tools`)
 > and personal repos (`professional-endeavors`, `prompts`) are **excluded**, as
@@ -85,7 +85,7 @@ the code that actually executes ranks:
 ## Methodology
 
 Membership rule: a repo is in scope iff its `origin` remote matches
-`github.com/PitziLabs/`. Run from the fleet root (`~/repos`) with `cloc`.
+`github.com/lentago/`. Run from the fleet root (`~/repos`) with `cloc`.
 Exclusions, and why:
 
 - **VCS / dependencies / build output:** `.git`, `node_modules`, `.venv`, `venv`,
@@ -107,7 +107,7 @@ cd ~/repos
 # Derive the in-scope repo list from actual remotes (don't hand-maintain it):
 ORG_REPOS=$(for d in */; do d="${d%/}"; \
   git -C "$d" remote get-url origin 2>/dev/null \
-    | grep -q 'github.com[:/]PitziLabs/' && printf '%s ' "$d"; done)
+    | grep -q 'github.com[:/]lentago/' && printf '%s ' "$d"; done)
 
 cloc $ORG_REPOS \
   --quiet \
@@ -127,4 +127,4 @@ Then update the table, the "Last updated" date, and add a row to the log below.
 | Date | Total LOC | Files | Notes |
 |------|----------:|------:|-------|
 | 2026-06-17 | 114,713 | 1,054 | Initial census over the **full `~/repos` working tree** (22 dirs, incl. third-party + personal). Superseded same day. |
-| 2026-06-17 | 76,388 | 519 | **Re-scoped to PitziLabs org repos only** (14 repos). cloc 2.06. |
+| 2026-06-17 | 76,388 | 519 | **Re-scoped to Lentago Labs org repos only** (14 repos). cloc 2.06. |

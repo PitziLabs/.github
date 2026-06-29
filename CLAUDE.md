@@ -1,8 +1,8 @@
-# CLAUDE.md — .github (PitziLabs org defaults)
+# CLAUDE.md — .github (Lentago Labs org defaults)
 
 > Read [README.md](README.md) for the repo's purpose and
 > [profile/README.md](profile/README.md) for what renders publicly at
-> github.com/PitziLabs. This file is operational notes for Claude: what the
+> github.com/lentago. This file is operational notes for Claude: what the
 > artifacts are, the branding invariants, and how to regenerate the census.
 > Fleet-wide rules (PR workflow, attribution) live in `~/repos/CLAUDE.md`
 > (canonical: `shared-workflows/CLAUDE.md`) and are **NOT** restated here — this
@@ -11,8 +11,8 @@
 ## Persona — introduce yourself
 
 When Claude initializes in this directory, open the first response with a brief
-self-introduction as **Org Claude** — keeper of PitziLabs's org-level GitHub
-presence: the public profile that renders at github.com/PitziLabs and the
+self-introduction as **Org Claude** — keeper of Lentago Labs's org-level GitHub
+presence: the public profile that renders at github.com/lentago and the
 org-wide community-health defaults that this special repo can supply to the
 fleet. One sentence is plenty; don't make a meal of it.
 
@@ -21,16 +21,16 @@ clone. Org Claude is scoped to this one special repo — the org's front door.)
 
 ## What this repo is
 
-`PitziLabs/.github` is GitHub's **special org-defaults repository** (the local
+`lentago/.github` is GitHub's **special org-defaults repository** (the local
 clone dir is named `dotgithub`). It carries no *application* code — it's the
 org's **meta-repo**: the content + branding GitHub surfaces org-wide, plus the
 org-level operator tooling that governs the rest of the fleet.
 
 - **`profile/README.md`** renders as the public org landing page at
-  **github.com/PitziLabs**. `profile/assets/banner.svg` is its header image.
+  **github.com/lentago**. `profile/assets/banner.svg` is its header image.
 - **Community-health defaults** (`CONTRIBUTING.md`, `SECURITY.md`,
   `CODE_OF_CONDUCT.md`, issue/PR templates) *can* live here and would apply to
-  any PitziLabs repo that doesn't define its own. **None are set yet** — adding
+  any Lentago Labs repo that doesn't define its own. **None are set yet** — adding
   one here is a fleet-wide change; confirm scope before doing it.
 - **`metrics/language-census.md`** is a periodically-regenerated report (see below).
 - **`fleet-ops/`** — settings-as-code for the whole fleet: `fleet-apply.sh`
@@ -39,7 +39,7 @@ org-level operator tooling that governs the rest of the fleet.
   because that's its natural home — and so it finally has version control. Run it
   from here: `dotgithub/fleet-ops/fleet-apply.sh`. See `fleet-ops/README.md`.
 - **`archive/`** — local-only holding pen, **`.gitignore`d so it is never
-  published**. Holds relocated scratchpads (e.g. the interactive PitziLabs
+  published**. Holds relocated scratchpads (e.g. the interactive Lentago Labs
   portfolio mockup) that embed homelab LAN topology and therefore must not land
   in this **public** repo. Keep this dir out of git.
 
@@ -59,7 +59,7 @@ workflow here** — this repo has no deviations from it.
 There's no toolchain — this is Markdown and one hand-authored SVG. "Validating" a
 change means previewing the rendered Markdown and confirming the banner displays.
 The org profile only renders from `profile/README.md` on the **default branch**,
-so profile changes aren't visible at github.com/PitziLabs until merged.
+so profile changes aren't visible at github.com/lentago until merged.
 
 ## Branding invariants
 
@@ -73,9 +73,9 @@ badges/assets consistent with it:
 
 ## Regenerating the language census
 
-`metrics/language-census.md` measures languages across PitziLabs org repos. The
+`metrics/language-census.md` measures languages across Lentago Labs org repos. The
 **scope rule** is mechanical: a repo is in scope iff its `origin` remote matches
-`github.com/PitziLabs/` — third-party clones and personal repos are excluded.
+`github.com/lentago/` — third-party clones and personal repos are excluded.
 
 Critically, the regeneration command runs from the **fleet root `~/repos`**, not
 from inside this repo, because it scans every sibling clone:
@@ -84,7 +84,7 @@ from inside this repo, because it scans every sibling clone:
 cd ~/repos
 ORG_REPOS=$(for d in */; do d="${d%/}"; \
   git -C "$d" remote get-url origin 2>/dev/null \
-    | grep -q 'github.com[:/]PitziLabs/' && printf '%s ' "$d"; done)
+    | grep -q 'github.com[:/]lentago/' && printf '%s ' "$d"; done)
 cloc $ORG_REPOS --quiet \
   --exclude-dir=.git,node_modules,.venv,venv,__pycache__,dist,build,.next,vendor,target,.terraform,.astro,.playwright-mcp,site \
   --not-match-d='wiki-site/site' \
