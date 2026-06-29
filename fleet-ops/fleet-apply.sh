@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-# fleet-apply.sh — enforce PitziLabs fleet repo settings that GitHub templates
+# fleet-apply.sh — enforce Lentago Labs fleet repo settings that GitHub templates
 # and branch rulesets do NOT carry: merge-button options and the topic spine.
 #
 #   ./fleet-apply.sh                 # check ALL non-archived org repos (read-only)
@@ -22,12 +22,12 @@
 # ============================================================================
 set -euo pipefail
 
-ORG=PitziLabs
+ORG=lentago
 MODE=check
 PRUNE=0
 ONLY=""
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
-SPINE_TOPICS=(pitzilabs claude)
+SPINE_TOPICS=(lentago claude)
 # Sentinel: the copy-pasted review prompt that caused a fleet-wide regression.
 # Any repo other than workstation-bootstrap carrying this is mis-customized.
 BOILERPLATE='bash bootstrap scripts for Linux workstations'

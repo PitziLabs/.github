@@ -1,15 +1,15 @@
-# fleet-ops — PitziLabs repo settings as code
+# fleet-ops — Lentago Labs repo settings as code
 
-Tooling to keep repo settings consistent across the PitziLabs fleet. Settings
+Tooling to keep repo settings consistent across the Lentago Labs fleet. Settings
 drift is the thing `~/repos/CLAUDE.md` worries about most, and GitHub splits the
 problem across three mechanisms — no single one covers everything:
 
 | Layer | Covers | Mechanism here |
 |---|---|---|
 | **Branch protection** | PR-required, squash-only, no force-push/deletion, required status checks | **per-repo rulesets** — created/verified by `fleet-apply.sh` (`repo-ruleset.json`). Each repo also adds its own required status checks. |
-| **Merge-button + topics** | squash-only button, auto-merge, delete-branch, the `pitzilabs`+`claude` topic spine | **`fleet-apply.sh`** (rulesets can't set these) |
+| **Merge-button + topics** | squash-only button, auto-merge, delete-branch, the `lentago`+`claude` topic spine | **`fleet-apply.sh`** (rulesets can't set these) |
 | **Leftover branches** | merged-PR residue + abandoned no-PR branches that `delete_branch_on_merge` never cleaned | **`fleet-apply.sh --prune-branches`** (the setting only fires forward, on merge) |
-| **File skeleton** | README/CLAUDE/LICENSE/CI-wrapper starter files | **`PitziLabs/repo-template`** GitHub template (copies files, not settings) |
+| **File skeleton** | README/CLAUDE/LICENSE/CI-wrapper starter files | **`lentago/repo-template`** GitHub template (copies files, not settings) |
 
 The lesson that motivated this: a **GitHub template repo copies files, not
 settings**, so it can't enforce branch protection or merge options. And a
@@ -30,7 +30,7 @@ org-wide ruleset is a paid feature (see below).
 Idempotent. Read-only by default; only `--apply` (settings) and
 `--prune-branches` (branch deletion) mutate, and they are **independent flags**
 so the destructive branch sweep is always opt-in. It enforces
-squash-only + auto-merge + delete-branch-on-merge and the `pitzilabs`+`claude`
+squash-only + auto-merge + delete-branch-on-merge and the `lentago`+`claude`
 topic spine, **creates the per-repo `main` branch ruleset** (`repo-ruleset.json`)
 if one is missing, and **warns** if any repo still carries the copy-pasted
 `bash bootstrap scripts…` review prompt (the regression fixed in June 2026). It
@@ -79,7 +79,7 @@ upgrades:
 
 ```bash
 gh auth refresh -h github.com -s admin:org          # scope (necessary but not sufficient)
-gh api -X POST orgs/PitziLabs/rulesets --input fleet-ops/org-ruleset.json
+gh api -X POST orgs/lentago/rulesets --input fleet-ops/org-ruleset.json
 ```
 
 Until then, `fleet-apply.sh` + `repo-ruleset.json` cover the same ground
