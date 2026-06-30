@@ -63,11 +63,21 @@ so profile changes aren't visible at github.com/lentago until merged.
 
 ## Branding invariants
 
-The profile badges (shields.io) and the banner share one palette — keep new
-badges/assets consistent with it:
+The profile badges (shields.io), the banner, and the org avatar share one
+palette — the Lentago Labs **"Tidewater"** system. Keep new badges/assets
+consistent with it:
 
-- Navy background `#1c3552`, accent orange `#e08438`.
-- Tagline: **"Production that shows up when the need does."**
+- Deep-teal hero `#0e2b28` → brand-teal `#1c4a44`, warm copper accent `#c2643c`,
+  limestone `#f3f0e8`. Copper is an accent — **one element per region, never a
+  fill.** (Canonical token values: `lentago/lentagolabs-dev` → `BRAND.md` and
+  `public/design-system/tokens/` — those win.)
+- Brand mark: the **benchmark disk** (copper survey ring + cream crosshair +
+  center point + station tick, in a deep-teal chip) — the org avatar in
+  `brand/avatars/`. The field-prompt glyph is the copper **▲** + `lentago`;
+  **never** the retired `:>` / `$` / `>` prompt.
+- Tagline: **"Production that shows up when the need does."** (carries over from
+  the former Pitzi Labs — same business, same voice; only name/palette/mark
+  changed).
 - Footer attribution discloses Claude co-authorship (Anthropic), framed as
   operator-directed, not SWE-authored — preserve that framing in any rewrite.
 

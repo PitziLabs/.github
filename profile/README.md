@@ -1,6 +1,6 @@
 <div align="center">
 
-![PitziLabs — Production that shows up when the need does.](./assets/banner.svg)
+![Lentago Labs — Production that shows up when the need does.](./assets/banner.svg)
 
 **Keeping production up — bare metal through cloud-native, and every platform shift in between. We build it, break it, and operate it.**
 
@@ -11,28 +11,28 @@
 </div>
 
 ### ☁️ &nbsp; Cloud & containers
-![AWS](https://img.shields.io/badge/AWS-1c3552?style=flat-square&logo=amazonwebservices&logoColor=e08438)
-![ECS Fargate](https://img.shields.io/badge/ECS%20Fargate-1c3552?style=flat-square&logo=amazonecs&logoColor=e08438)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-1c3552?style=flat-square&logo=kubernetes&logoColor=e08438)
-![Docker](https://img.shields.io/badge/Docker-1c3552?style=flat-square&logo=docker&logoColor=e08438)
+![AWS](https://img.shields.io/badge/AWS-1c4a44?style=flat-square&logo=amazonwebservices&logoColor=c2643c)
+![ECS Fargate](https://img.shields.io/badge/ECS%20Fargate-1c4a44?style=flat-square&logo=amazonecs&logoColor=c2643c)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-1c4a44?style=flat-square&logo=kubernetes&logoColor=c2643c)
+![Docker](https://img.shields.io/badge/Docker-1c4a44?style=flat-square&logo=docker&logoColor=c2643c)
 
 ### 🖥️ &nbsp; Bare metal & virtualization
-![Proxmox](https://img.shields.io/badge/Proxmox-1c3552?style=flat-square&logo=proxmox&logoColor=e08438)
-![VMware](https://img.shields.io/badge/VMware-1c3552?style=flat-square&logo=vmware&logoColor=e08438)
-![Linux](https://img.shields.io/badge/Linux-1c3552?style=flat-square&logo=linux&logoColor=e08438)
+![Proxmox](https://img.shields.io/badge/Proxmox-1c4a44?style=flat-square&logo=proxmox&logoColor=c2643c)
+![VMware](https://img.shields.io/badge/VMware-1c4a44?style=flat-square&logo=vmware&logoColor=c2643c)
+![Linux](https://img.shields.io/badge/Linux-1c4a44?style=flat-square&logo=linux&logoColor=c2643c)
 
 ### 🏗️ &nbsp; Infrastructure as code
-![Terraform](https://img.shields.io/badge/Terraform-1c3552?style=flat-square&logo=terraform&logoColor=e08438)
-![Ansible](https://img.shields.io/badge/Ansible-1c3552?style=flat-square&logo=ansible&logoColor=e08438)
+![Terraform](https://img.shields.io/badge/Terraform-1c4a44?style=flat-square&logo=terraform&logoColor=c2643c)
+![Ansible](https://img.shields.io/badge/Ansible-1c4a44?style=flat-square&logo=ansible&logoColor=c2643c)
 
 ### 🔁 &nbsp; CI/CD & supply chain
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-1c3552?style=flat-square&logo=githubactions&logoColor=e08438)
-![OIDC](https://img.shields.io/badge/OIDC-e08438?style=flat-square&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-1c4a44?style=flat-square&logo=githubactions&logoColor=c2643c)
+![OIDC](https://img.shields.io/badge/OIDC-c2643c?style=flat-square&logoColor=white)
 
 ### 📟 &nbsp; Observability & on-call
-![Grafana](https://img.shields.io/badge/Grafana-1c3552?style=flat-square&logo=grafana&logoColor=e08438)
-![Prometheus](https://img.shields.io/badge/Prometheus-1c3552?style=flat-square&logo=prometheus&logoColor=e08438)
-![CloudWatch](https://img.shields.io/badge/CloudWatch-1c3552?style=flat-square&logo=amazoncloudwatch&logoColor=e08438)
+![Grafana](https://img.shields.io/badge/Grafana-1c4a44?style=flat-square&logo=grafana&logoColor=c2643c)
+![Prometheus](https://img.shields.io/badge/Prometheus-1c4a44?style=flat-square&logo=prometheus&logoColor=c2643c)
+![CloudWatch](https://img.shields.io/badge/CloudWatch-1c4a44?style=flat-square&logo=amazoncloudwatch&logoColor=c2643c)
 
 <br/>
 
