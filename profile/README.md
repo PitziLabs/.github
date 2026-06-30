@@ -4,7 +4,7 @@
 
 **Keeping production up — bare metal through cloud-native, and every platform shift in between. We build it, break it, and operate it.**
 
-<sub>📖 &nbsp;The full runbook lives at **[pitzilabs.dev](https://pitzilabs.dev)** →</sub>
+<sub>📖 &nbsp;The full runbook lives at **[lentago.dev](https://lentago.dev)** →</sub>
 
 <br/>
 
@@ -45,6 +45,6 @@
 | **AI-augmented delivery** | A Claude agent fleet that builds and reviews — directed by humans, who own every merge. |
 
 <div align="center">
-<sub><b>chris@pitzilabs.dev</b> &nbsp;·&nbsp; New England, US &nbsp;·&nbsp; remote · async-friendly</sub>
+<sub><b>chris@lentago.dev</b> &nbsp;·&nbsp; New England, US &nbsp;·&nbsp; remote · async-friendly</sub>
 </div>
 </div>
