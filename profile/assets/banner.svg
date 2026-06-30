@@ -1,29 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="PitziLabs — Production that shows up when the need does.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Lentago Labs — Production that shows up when the need does.">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1628"></stop>
-      <stop offset="1" stop-color="#1c3552"></stop>
+    <!-- The only gradient in the system: the hero 150deg #0e2b28 -> #1c4a44 -->
+    <linearGradient id="hero" x1="0.08" y1="0" x2="0.86" y2="1">
+      <stop offset="0" stop-color="#0e2b28"></stop>
+      <stop offset="1" stop-color="#1c4a44"></stop>
     </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#e08438" stroke-opacity="0.05" stroke-width="1"></path>
-    </pattern>
+    <clipPath id="frame"><rect width="1280" height="320"></rect></clipPath>
   </defs>
-  <rect width="1280" height="320" fill="url(#bg)"></rect>
-  <rect width="1280" height="320" fill="url(#grid)"></rect>
-  <rect x="0" y="316" width="1280" height="4" fill="#e08438"></rect>
 
-  
-  <text x="1180" y="300" text-anchor="end" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="360" fill="#e08438" fill-opacity="0.06" letter-spacing="-20">:&gt;</text>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="320" fill="url(#hero)"></rect>
 
-  
-  <text x="80" y="118" font-family="ui-monospace, Menlo, monospace" font-size="17" fill="#8aa0bd" letter-spacing="5">PRACTICE · EST. 1997 · INFRASTRUCTURE OPS</text>
+    <!-- Faint topographic contour lines (copper, ~8-14% opacity) -->
+    <g fill="none" stroke="#c2643c" stroke-width="1.5">
+      <path d="M820 360 C 940 250, 1080 250, 1220 330" stroke-opacity="0.10"></path>
+      <path d="M820 340 C 950 215, 1090 215, 1240 300" stroke-opacity="0.12"></path>
+      <path d="M830 322 C 965 182, 1100 182, 1255 272" stroke-opacity="0.14"></path>
+      <path d="M845 306 C 980 150, 1110 150, 1268 246" stroke-opacity="0.11"></path>
+    </g>
 
-  
-  <text x="78" y="190" font-family="&#39;Space Grotesk&#39;, system-ui, sans-serif" font-weight="700" font-size="76" fill="#faf7f2" letter-spacing="-3">Pitzi<tspan fill="#e08438">Labs</tspan> <tspan font-family="ui-monospace, Menlo, monospace" fill="#e08438" font-size="64">:&gt;</tspan></text>
+    <!-- Giant translucent benchmark-disk watermark, bleeding off the top-right -->
+    <g>
+      <circle cx="1150" cy="86" r="200" fill="none" stroke="#c2643c" stroke-width="14" stroke-opacity="0.11"></circle>
+      <path d="M1150 -180V352 M838 86H1462" stroke="#f3f0e8" stroke-width="9" stroke-opacity="0.07"></path>
+      <circle cx="1150" cy="86" r="32" fill="#c2643c" fill-opacity="0.11"></circle>
+      <path d="M1150 286V372" stroke="#c2643c" stroke-width="14" stroke-opacity="0.11" stroke-linecap="round"></path>
+    </g>
 
-  
-  <text x="80" y="244" font-family="&#39;Space Grotesk&#39;, system-ui, sans-serif" font-size="26" fill="#d8cec2" letter-spacing="-0.5">Production that shows up when the need does.</text>
+    <!-- Bottom accent rule, copper -->
+    <rect x="0" y="316" width="1280" height="4" fill="#c2643c"></rect>
 
-  
-  <text x="80" y="284" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#8aa0bd">~/pitzi-labs/runbook.md  ·  build it · break it · operate it</text>
+    <!-- Eyebrow (mono, uppercase, tracked) -->
+    <text x="82" y="120" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="16" fill="#8fb0a8" letter-spacing="5">PRACTICE · EST. 1997 · INFRASTRUCTURE OPS</text>
+
+    <!-- Brand lockup: benchmark-disk mark + wordmark -->
+    <g transform="translate(80,150) scale(0.90625)">
+      <rect width="64" height="64" rx="14" fill="#0e2b28"></rect>
+      <circle cx="32" cy="30" r="13" fill="none" stroke="#c2643c" stroke-width="2.4"></circle>
+      <path d="M32 14v32M16 30h32" stroke="#f3f0e8" stroke-width="1.6"></path>
+      <circle cx="32" cy="30" r="2.6" fill="#c2643c"></circle>
+      <path d="M32 46v5" stroke="#c2643c" stroke-width="2.4" stroke-linecap="round"></path>
+    </g>
+    <text x="156" y="197" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="58" fill="#f3f0e8" letter-spacing="-2">Lentago Labs</text>
+
+    <!-- Tagline -->
+    <text x="82" y="250" font-family="'Space Grotesk', system-ui, sans-serif" font-size="26" fill="#cdbfae" letter-spacing="-0.5">Production that shows up when the need does.</text>
+
+    <!-- Field-prompt line (mono): copper triangulation marker + lentago, never :> -->
+    <text x="82" y="290" font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="15"><tspan fill="#c2643c">▲</tspan><tspan fill="#8fb0a8"> lentago</tspan><tspan fill="#7a988f"> runbook.md  ·  build it · break it · operate it</tspan></text>
+  </g>
 </svg>
