@@ -71,10 +71,11 @@ consistent with it:
   limestone `#f3f0e8`. Copper is an accent — **one element per region, never a
   fill.** (Canonical token values: `lentago/lentagolabs-dev` → `BRAND.md` and
   `public/design-system/tokens/` — those win.)
-- Brand mark: the **benchmark disk** (copper survey ring + cream crosshair +
-  center point + station tick, in a deep-teal chip) — the org avatar in
-  `brand/avatars/`. The field-prompt glyph is the copper **▲** + `lentago`;
-  **never** the retired `:>` / `$` / `>` prompt.
+- Brand mark: the **blossom** (five limestone petals on teal contour outlines,
+  copper-tipped stamens, a pale center, in a deep-teal chip) — the org avatar in
+  `brand/avatars/`. It replaced the former benchmark disk in "Tidewater". The
+  field-prompt glyph is the copper **▲** + `lentago`; **never** the retired
+  `:>` / `$` / `>` prompt.
 - Tagline: **"Production that shows up when the need does."** (carries over from
   the former Pitzi Labs — same business, same voice; only name/palette/mark
   changed).
