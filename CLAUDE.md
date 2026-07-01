@@ -28,10 +28,12 @@ org-level operator tooling that governs the rest of the fleet.
 
 - **`profile/README.md`** renders as the public org landing page at
   **github.com/lentago**. `profile/assets/banner.svg` is its header image.
-- **Community-health defaults** (`CONTRIBUTING.md`, `SECURITY.md`,
-  `CODE_OF_CONDUCT.md`, issue/PR templates) *can* live here and would apply to
-  any Lentago Labs repo that doesn't define its own. **None are set yet** — adding
-  one here is a fleet-wide change; confirm scope before doing it.
+- **Community-health defaults** — `CONTRIBUTING.md`, `SECURITY.md`, and
+  `CODE_OF_CONDUCT.md` live at the repo root (seeded 2026-07-01, issue #18) and
+  apply org-wide to any Lentago Labs repo that doesn't define its own.
+  Issue/PR templates are still unset. Changing these is a fleet-wide change;
+  confirm scope before editing. Security contact + CoC enforcement address is
+  `chris@lentago.dev`.
 - **`metrics/language-census.md`** is a periodically-regenerated report (see below).
 - **`fleet-ops/`** — settings-as-code for the whole fleet: `fleet-apply.sh`
   (the merge-button/topic-spine/ruleset drift checker) plus the ruleset JSON.
